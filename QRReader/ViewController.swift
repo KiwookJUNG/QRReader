@@ -38,6 +38,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate  
             if machineReaderbleCode.type == AVMetadataObject.ObjectType.qr {
                 // 만약 카메라가 읽은 데이터가 qr코드 타입이면 string value로 바꿔 준뒤 stringURL에 넣어준다.
                 stringURL = machineReaderbleCode.stringValue!
+                performSegue(withIdentifier: "openLink", sender: self )
             }
         }
         
